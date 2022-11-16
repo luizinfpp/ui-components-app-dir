@@ -3,7 +3,7 @@ import * as React from 'react'
 import { useState } from 'react'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
-import { useRouter } from 'next/navigation';
+import { useRouter } from 'next/navigation'
 
 const ContainerPages = styled(motion.div)`
   width: 100%;
@@ -146,7 +146,7 @@ const InteractiveRatingPage = () => {
     setCurrentBtn(key)
   }
 
-  const router = useRouter();
+  const router = useRouter()
 
   return (
     <>
@@ -179,7 +179,7 @@ const InteractiveRatingPage = () => {
         </RadioGroup>
         <button
           onClick={() => {
-            router.push('/interactive-rating//thank-you')
+            router.push(`/interactive-rating/thank-you?opt=${currentBtn}`)
           }}
         >
           <p>Submit</p>

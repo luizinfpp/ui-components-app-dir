@@ -3,6 +3,7 @@ import * as React from 'react'
 import { useState } from 'react'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
+import { useSearchParams } from 'next/navigation'
 
 const ContainerPages = styled(motion.div)`
   width: 100%;
@@ -138,12 +139,8 @@ const RadioGroup = styled.div`
 const InteractiveRatingPage = () => {
   let buttons = Array.from({ length: 5 }, (_, i) => i + 1) //start in 1
 
-  const [currentBtn, setCurrentBtn] = useState(0)
-  const [isSelected, setIsSelected] = useState(false)
-
-  const RadioSelect = (key: number) => {
-    setCurrentBtn(key)
-  }
+  const searchParams = useSearchParams();
+  const option = searchParams.get('opt');
 
   return (
     <>
@@ -155,7 +152,7 @@ const InteractiveRatingPage = () => {
       >
         <div id="thankYouContainer">
           <img src="interactive-rating-thank-you.svg" alt="Thank You" />
-          <h4>You selected {currentBtn} of 5</h4>
+          <h4>You selected {option} of 5</h4>
           <h2>Thank you!</h2>
           <p>
             We appreciate you taking the time to give a rating. If you ever need
