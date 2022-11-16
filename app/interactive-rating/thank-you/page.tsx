@@ -3,7 +3,6 @@ import * as React from 'react'
 import { useState } from 'react'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
-import { useRouter } from 'next/navigation';
 
 const ContainerPages = styled(motion.div)`
   width: 100%;
@@ -146,44 +145,23 @@ const InteractiveRatingPage = () => {
     setCurrentBtn(key)
   }
 
-  const router = useRouter();
-
   return (
     <>
       <ContainerPages
-        key="firstPage"
+        key="secondPage"
         initial={{ x: 500 }}
         animate={{ x: 0 }}
         exit={{ x: -500 }}
       >
-        <span id="starContainer">
-          <img src="interactive-rating-icon-star.svg" alt="Star" />
-        </span>
-        <h2>How did we do?</h2>
-        <p>
-          Please let us know how we did with your support request. All feedback
-          is appreciated to help us improve our offering!
-        </p>
-        <RadioGroup>
-          {buttons.map(b => {
-            return (
-              <div
-                key={b}
-                onClick={() => RadioSelect(b)}
-                className={currentBtn == b ? 'selected' : ''}
-              >
-                <p>{b}</p>
-              </div>
-            )
-          })}
-        </RadioGroup>
-        <button
-          onClick={() => {
-            router.push('/interactive-rating//thank-you')
-          }}
-        >
-          <p>Submit</p>
-        </button>
+        <div id="thankYouContainer">
+          <img src="interactive-rating-thank-you.svg" alt="Thank You" />
+          <h4>You selected {currentBtn} of 5</h4>
+          <h2>Thank you!</h2>
+          <p>
+            We appreciate you taking the time to give a rating. If you ever need
+            more support, don’t hesitate to get in touch!
+          </p>
+        </div>
       </ContainerPages>
     </>
   )
