@@ -151,7 +151,7 @@ const InteractiveRatingPage = () => {
   return (
     <>
       <ContainerPages
-        key="firstPage"
+        key="firstPage" //without key attribute, animatepresence will not work
         initial={{ x: 500 }}
         animate={{ x: 0 }}
         exit={{ x: -500 }}
