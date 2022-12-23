@@ -6,7 +6,7 @@ import AccordionComponent from '../../components/accordion'
 const kumbh = Kumbh_Sans({ subsets: ['latin'], weight: ['400', '700'] })
 
 const FaqAccordionCardPage = () => {
-  
+
   const accordionContent = [
     {
       title: "How many team members can I invite?",
@@ -49,10 +49,9 @@ const FaqAccordionCardPage = () => {
           </div>
         </div>
         <div className="p-8 flex flex-col justify-center ">
-          <h1 className="text-black text-4xl my-3 font-[700] leading-normal">
+          <h1 className="text-black text-4xl mb-3 font-[700] leading-normal select-none">
             FAQ
           </h1>
-
           <AccordionComponent accordionContent={accordionContent} />
         </div>
       </div>

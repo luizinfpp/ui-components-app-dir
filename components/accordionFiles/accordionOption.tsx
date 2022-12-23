@@ -16,7 +16,7 @@ const AccordionOptionComponent = ({accordionSelected, SelectAccordionOption, tit
           accordionSelected == index
             ? 'font-[700] text-[#1d1e35]'
             : 'text-[#4a4b5e]'
-        } hover:cursor-pointer flex justify-between items-center`}
+        } hover:cursor-pointer flex justify-between items-center select-none`}
       >
         <div onClick={() => SelectAccordionOption(index)}>
           {title}
