@@ -49,9 +49,11 @@ const Lvl1PinkGradientBtn = () => {
               />
 
               <div className="absolute top-0 right-0 flex h-[100%] gap-1">
-                <div className="flex items-center justify-center opacity-0">
-                  <Lvl1ComponentsIconError />
-                </div>
+                {errors.email && touched.email && (
+                  <div className="flex items-center justify-center">
+                    <Lvl1ComponentsIconError />
+                  </div>
+                )}
                 <Button
                   className="w-20 h-[100%] rounded-3xl bg-gradient-to-br from-[#f8bfbf] to-[#ee8c8c]  text-white font-[300] text-2xl active:bg-none active:bg-[#fff5f5] active:text-[#ee8c8c]"
                   type="submit"

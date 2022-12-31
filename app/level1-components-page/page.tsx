@@ -7,7 +7,7 @@ const josefin_sans = Josefin_Sans({ subsets: ['latin'], weight: ['300', '400', '
 const Level1ComponentsPage = () => {
   return (
     <div
-      className="bg-[#efefef] flex justify-center items-center"
+      className="bg-[#efefef] flex flex-col justify-center items-center"
       style={{ width: '100vw', height: '100vh' }}
     >
       <div
