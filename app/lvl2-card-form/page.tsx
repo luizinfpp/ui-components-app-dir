@@ -13,10 +13,6 @@ const Level2CardFormPage = () => {
   const [cardExpYY, setCardExpYY] = useState<string>('');
   const [cardCvc, setCvc] = useState<string>('');
 
-  useEffect(() => {
-   console.log(cardName); 
-  }, [cardName]);
-
   return (
     <div
       className={`${space_grotesk.className} bg-[#efefef] flex justify-center items-center`}
