@@ -8,7 +8,7 @@ const Level2DropdownMenuPage = () => {
 
   return (
     <div
-      className="bg-[#696969] overflow-hidden relative" // PROBLEM WITH OVERFLOW HIDDEN - Solution: If you are trying to hide absolute positioned elements make sure the container of those absolute positioned elements is relatively positioned.
+      className="bg-[#696969] overflow-hidden relative" // PROBLEM WITH OVERFLOW HIDDEN - Not hiding scrollbar - Solution: If you are trying to hide absolute positioned elements make sure the container of those absolute positioned elements is relatively positioned.
       style={{ width: '100vw', height: '100vh'}}
     >
       <div
